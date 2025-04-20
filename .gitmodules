@@ -1,0 +1,6 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/MohammedHamza0631/vidsync-fe
+[submodule "server"]
+	path = server
+	url = https://github.com/MohammedHamza0631/vidsync-be
