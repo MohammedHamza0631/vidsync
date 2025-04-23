@@ -1,0 +1,15 @@
+# yt-app/.github/workflows/ping-backend.yml
+
+name: Keep Backend Warm (Daily Ping)
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # every day at 3:00 AM UTC
+  workflow_dispatch:     # allows manual trigger
+
+jobs:
+  ping-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl health endpoint
+        run: curl -s https://vidsync-be.onrender.com/api/healthz
