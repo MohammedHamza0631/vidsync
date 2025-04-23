@@ -1,11 +1,12 @@
 # yt-app/.github/workflows/ping-backend.yml
 
-name: Keep Backend Warm (Daily Ping)
+name: Keep Backend Warm (Twice Daily Ping)
 
 on:
   schedule:
-    - cron: '0 3 * * *'  # every day at 3:00 AM UTC
-  workflow_dispatch:     # allows manual trigger
+    - cron: '0 3 * * *'   # 3:00 AM UTC
+    - cron: '0 15 * * *'  # 3:00 PM UTC
+  workflow_dispatch:      # allows manual trigger
 
 jobs:
   ping-backend:
